@@ -1,0 +1,8 @@
+.idea
+bitcoin/config.toml
+certbot/ssl
+mysql/.env
+nginx/log
+vpn/.env
+wordpress/.env
+wordpress/src

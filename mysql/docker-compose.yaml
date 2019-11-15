@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql-${USER}
+    restart: always
+    env_file:
+      - ".env"
+    ports:
+      - "${DEV_PORT}:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - "/data/mysql:/var/lib/mysql"
+      - "./mysql/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf"

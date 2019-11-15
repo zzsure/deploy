@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  bitcoin:
+    image: zzsure/bitcoin:1.0.7
+    container_name: bitcoin-${USER}
+    network_mode: "host"
+    #working_dir: /opt/bitcoin
+    volumes:
+      - "/root/deploy/bitcoin/config.toml:/opt/bitcoin/config.toml"
+    restart: always
+    entrypoint:
+      - /opt/bitcoin/bitcoin
+      - server
+      - -c
+      - /opt/bitcoin/config.toml
