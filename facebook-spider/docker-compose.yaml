@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+  facebook-spider:
+    image: zzsure/facebook-spider:0.0.11
+    container_name: facebook-spider-${USER}
+    network_mode: "host"
+    working_dir: /root/deploy/facebook-spider
+    volumes:
+      - "./config.toml:/root/deploy/facebook-spider/config.toml"
+      - "./asset:/root/deploy/facebook-spider/asset"
+      - "./data:/root/deploy/facebook-spider/data"
+    restart: always
+    entrypoint:
+      - /root/deploy/facebook-spider/facebook-spider
+      - spider
+      - -c
+      - /root/deploy/facebook-spider/config.toml

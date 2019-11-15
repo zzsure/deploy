@@ -1,0 +1,20 @@
+[Log]
+Type = "raw"
+
+[Spider]
+CsvPath = "./asset/urls.csv"
+ArticleBaseDir = "/data/facebook-spider/"
+CrawlMaxSleep = 20
+RepeatDays = 7
+StartHour = 6
+StartMin = 0
+RecusiveMaxCount = 100
+
+[FaceBook]
+Account = "188xxxxxxxx"
+Password = "xxxxx"
+[Redis]
+Address = "127.0.0.1:6379"
+Password = ""
+DB = 1
+Prefix = "fb"
