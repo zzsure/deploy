@@ -7,9 +7,9 @@ services:
     env_file:
       - ".env"
     ports:
-      - "${DEV_PORT}:3306"
+      - "${PORT}:3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${ROOT_PASSWORD}
     volumes:
-      - "/data/mysql:/var/lib/mysql"
+      - "${DATA_PATH}:/var/lib/mysql"
       - "./mysql/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf"
