@@ -2,7 +2,7 @@ version: "3.3"
 services:
   facebook-spider:
     image: zzsure/facebook-spider:0.0.11
-    container_name: facebook-spider-${USER}
+    container_name: facebook-spider
     network_mode: "host"
     working_dir: /root/deploy/facebook-spider
     volumes:

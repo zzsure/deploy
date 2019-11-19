@@ -1,0 +1,20 @@
+version: "3.3"
+services:
+  chevereto:
+    image: nmtan/chevereto
+    container_name: chevereto
+    restart: always
+    env_file:
+      - ".env"
+    ports:
+      - ${PORT}:80
+    environment:
+      CHEVERETO_DB_HOST: ${CHEVERETO_DB_HOST}
+      CHEVERETO_DB_USERNAME: ${CHEVERETO_DB_USERNAME}
+      CHEVERETO_DB_PASSWORD: ${CHEVERETO_DB_PASSWORD}
+      CHEVERETO_DB_NAME: ${CHEVERETO_DB_NAME}
+      CHEVERETO_DB_PREFIX: ${CHEVERETO_DB_PREFIX}
+    volumes:
+      - /data/chevereto/images:/var/www/html/images:rw
+      - ./conf/php.ini:/usr/local/etc/php/conf.d/php.ini
+        #- ./src:/var/www/html

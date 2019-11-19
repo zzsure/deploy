@@ -2,7 +2,7 @@ version: "3.3"
 services:
   mysql:
     image: mysql:5.7
-    container_name: mysql-${USER}
+    container_name: mysql
     restart: always
     env_file:
       - ".env"

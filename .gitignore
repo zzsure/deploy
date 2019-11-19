@@ -6,3 +6,5 @@ nginx/log
 vpn/.env
 wordpress/.env
 wordpress/src
+chevereto/src
+chevereto/.env

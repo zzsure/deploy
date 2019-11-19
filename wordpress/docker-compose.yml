@@ -3,7 +3,7 @@ version: '3.3'
 services:
   wordpress:
     image: wordpress:latest
-    container_name: wordpress-${USER}
+    container_name: wordpress
     restart: always
     #network_mode: "host"
     env_file:

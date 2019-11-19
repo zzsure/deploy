@@ -2,7 +2,7 @@ version: "3.3"
 services:
   bitcoin:
     image: zzsure/bitcoin:1.0.7
-    container_name: bitcoin-${USER}
+    container_name: bitcoin
     network_mode: "host"
     #working_dir: /opt/bitcoin
     volumes:

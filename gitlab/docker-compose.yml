@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest 
+    container_name: gitlab
+    hostname: code.azbit.cn
+    restart: always
+    environment:
+        GITLAB_OMNIBUS_CONFIG: |
+            external_url 'https://code.azbit.cn'
+    #network_mode: "host"
+    volumes:
+      - "./conf:/etc/gitlab"
+      - "/data/gitlab/log:/var/log/gitlab"
+      - "/data/gitlab/opt:/var/opt/gitlab"
+    ports:
+      - "6135:80"
