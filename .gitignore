@@ -1,5 +1,6 @@
 .idea
 bitcoin/config.toml
+az-fin/config.toml
 certbot/ssl
 mysql/.env
 nginx/log
@@ -8,3 +9,5 @@ wordpress/.env
 wordpress/src
 chevereto/src
 chevereto/.env
+mysql/data
+gitlab/conf/ssl

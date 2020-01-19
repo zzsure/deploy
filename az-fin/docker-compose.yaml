@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  az-fin:
+    image: zzsure/az-fin:0.0.1
+    container_name: az-fin
+    network_mode: "host"
+    volumes:
+      - "/root/deploy/az-fin/config.toml:/root/deploy/az-fin/config.toml"
+    restart: always
+    entrypoint:
+      - /root/deploy/az-fin/az-fin
+      - ${ARG:-server}
+      - -c
+      - /root/deploy/az-fin/config.toml
