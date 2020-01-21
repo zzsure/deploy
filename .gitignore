@@ -3,6 +3,7 @@ bitcoin/config.toml
 az-fin/config.toml
 certbot/ssl
 mysql/.env
+redis/.env
 nginx/log
 vpn/.env
 wordpress/.env
