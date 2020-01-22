@@ -13,3 +13,4 @@ services:
       - "/data/nginx/log:/var/log/nginx"
       - "/root/deploy/certbot/ssl:/etc/letsencrypt"
       - "/root/deploy/wordpress/src:/root/deploy/wordpress/src"
+      - "./www:/var/www"

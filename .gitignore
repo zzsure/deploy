@@ -12,3 +12,4 @@ chevereto/src
 chevereto/.env
 mysql/data
 gitlab/conf/ssl
+nginx/www

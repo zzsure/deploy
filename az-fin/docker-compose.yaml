@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   az-fin:
-    image: zzsure/az-fin:0.0.1
+    image: zzsure/az-fin:1.0.1
     container_name: az-fin
     network_mode: "host"
     volumes:
