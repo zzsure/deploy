@@ -13,3 +13,4 @@ chevereto/.env
 mysql/data
 gitlab/conf/ssl
 nginx/www
+redis/data
